@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ParseKML</string>
+    <string name="api_key_map">API_KEY</string>
+</resources>
