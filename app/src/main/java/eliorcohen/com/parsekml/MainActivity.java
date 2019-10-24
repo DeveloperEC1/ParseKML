@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     private void initUI() {
+        mMapView = findViewById(R.id.map);
+
         pathPoints = new ArrayList<>();
     }
 
@@ -45,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     protected void onStart() {
         super.onStart();
 
-        mMapView = findViewById(R.id.map);
         if (mMapView != null) {
             mMapView.onCreate(null);
             mMapView.onResume();
