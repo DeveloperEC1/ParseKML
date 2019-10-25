@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><kml>
 <Document>
 <Placemark id="1">
-<name>"1"</name>
+<name>1</name>
 <LineString>
      <coordinates>78.459774,17.425828
         78.459752,17.425884
