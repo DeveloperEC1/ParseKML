@@ -1,6 +1,7 @@
 package eliorcohen.com.parsekml;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -74,16 +75,17 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                                 coords = kmlLineString.getGeometryObject();
                                 pathPoints.addAll(coords);
                             }
+                            if (placemark.hasProperty("name")) {
+                                Log.d("Name", "" + placemark.getProperty("name"));
+                            }
                         }
                     }
                 }
-
                 for (LatLng latLng : pathPoints) {
                     mGoogleMap.addMarker(new MarkerOptions().position(latLng).icon(BitmapDescriptorFactory
                             .defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
                 }
             }
-
         } catch (XmlPullParserException e) {
             e.printStackTrace();
         } catch (IOException e) {
